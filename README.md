@@ -45,7 +45,11 @@ Data Flow Tasks - Transformations:
 ![image](https://user-images.githubusercontent.com/110323703/215387775-5dd6816d-f05c-4d0b-96ef-70e58a47f4ec.png)
 ![image](https://user-images.githubusercontent.com/110323703/215388586-0d567ad7-3933-4339-8532-80e4e9f0afd9.png)
 
-- 
+- Audit Transformation: it saves other information about the environment such as package name, username, machine name, time execution, task name, etc.
+- Export Column Transformation: it reads data from a data flow and insert data into a file. For this transformation, I need Source, Data Conversion, and Export Column components.  
+- Import Column Transformation
+- Merge Transformation
+- Merge Join Transformation
 
 
 
