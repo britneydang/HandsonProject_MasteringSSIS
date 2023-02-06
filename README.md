@@ -49,7 +49,17 @@ Data Flow Tasks - Transformations:
 - Export Column Transformation: it reads data from a data flow and insert data into a file. For this transformation, I need Source, Data Conversion, and Export Column components.  
 - Import Column Transformation
 - Merge Transformation
-- Merge Join Transformation: 
+- Merge Join Transformation: it combines both sorted two data sources (2 sources have one similar column as primary key which will be used to join) into one using a different type of joins. 2 OLE DB Source component, 2 sort components, a merge join, a flat file destination component -> salesorderID is the primary key -> sort by it in both sources -> Merge Join Editor -> select type of joins, select which columns I want to see in the new table (destination) -> 
+
+![image](https://user-images.githubusercontent.com/110323703/216878467-8d5a04c4-5b51-4daa-862b-fb44e735c141.png)
+![image](https://user-images.githubusercontent.com/110323703/216880303-bb1b6bb2-bb82-45e0-937f-a5b71fab70c8.png)
+
+- Lookup Transformation: it joins additional columns to the data flow by looking up values in a table.
+
+![image](https://user-images.githubusercontent.com/110323703/216881964-96d8ab92-d048-4686-98e2-da461f189814.png)
+![image](https://user-images.githubusercontent.com/110323703/216882902-d551d18d-b2fa-420c-a5c0-08c32c120225.png)
+
+- Cache Transform: need 2 data flow tasks. 1 data flow will contain a source, a lookup, a destination
 
 
 
