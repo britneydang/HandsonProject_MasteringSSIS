@@ -49,7 +49,7 @@ Data Flow Tasks - Transformations:
 - Export Column Transformation: it reads data from a data flow and insert data into a file. For this transformation, I need Source, Data Conversion, and Export Column components.  
 - Import Column Transformation
 - Merge Transformation
-- Merge Join Transformation
+- Merge Join Transformation: 
 
 
 
