@@ -16,7 +16,7 @@ Data Migration Techniques:
 
 ![image](https://user-images.githubusercontent.com/110323703/215315853-4c19f3b1-27a6-49e6-9778-1e2bc96c7a32.png)
 
-Data Flow Tasks - Transformations:
+Working with Data Flow Tasks:
 - Character Map Transformation: it is used to converted data to upper case or lower case. In data flow task, drag Character Map in between Source and Destination components -> Editor: select column that need to be changed -> Destination: add a new column for the change (new column) or replace the old with the change (in-place change)? Select Operation (uppercase, lowercase, etc.), add Alias name for new column -> Ok
 
 ![image](https://user-images.githubusercontent.com/110323703/215317189-070d9bdf-fbb7-4a03-abd8-49c9e217f1f3.png)
@@ -84,7 +84,64 @@ Data Flow Tasks - Transformations:
 ![image](https://user-images.githubusercontent.com/110323703/217666278-3a421b55-aad6-43e4-b66d-6dd06fd91483.png)
 ![image](https://user-images.githubusercontent.com/110323703/217666415-d4be63c6-a96e-483d-8a09-3022b53b6a18.png)
 - Row Count Transformation:
-- 
+- OLE DB Command transformation:
+- Pivot transformation:
+- Unpivot transformation:
+
+Working with Control Flow Tasks:
+- Bulk Insert task:
+- Sequence Container task:
+- Execute Process task:
+- Execute Package task:
+- Passing Parameters between Packages:
+- File System task:
+- Web Service task:
+- XML task:
+- Data Profiling task:
+- Transfer Database task:
+- Transfer SQL Server Objects task:
+- Transfer Jobs task:
+- Transfer Login task:
+- Transfer Error Messages task:
+- For Loop Container in a Fixed Manner
+- For Loop Container in a Variant Manner:
+- For Each File Enumerator:
+- For Each Item Enumerator:
+- For Each From Variable Enumerator:
+- For Each Node List Enumerator:
+- For Each SMO Enumerator:
+- For Each ADO Enumerator:
+
+Working with Configuration Types:
+- Configuration Files:
+- Configuration Tables:
+
+Creating Dynamic Packages:
+
+Event Handling Techniques:
+
+Working with Log Providers:
+- Log Provider for Text Files:
+- Log Provider for XML Files:
+- Log Provider for Windows Event Log:
+
+Working with WMI:
+- WMI Data Reader task:
+- WMI Event Watcher task:
+
+Using Message Queing techniques:
+
+Working with Maintenance Planning:
+- Backup Database task:
+- SQL Server Agent Job task:
+- Execute T-SQL task:
+- Update Statistics task:
+- History Cleanup task:
+- Shrink Database task:
+- Rebuild Indexes task:
+- Reorganize Index task:
+- Check Database Integrity task:
+
 
 
 
