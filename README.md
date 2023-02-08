@@ -74,13 +74,18 @@ Data Flow Tasks - Transformations:
 ![image](https://user-images.githubusercontent.com/110323703/217625517-ab8f2f63-0281-499e-9770-bcdc2c6bba1c.png)
 ![image](https://user-images.githubusercontent.com/110323703/217625950-0c682fc2-c9db-4ae7-b8fe-870a04876cc6.png)
 ![image](https://user-images.githubusercontent.com/110323703/217636842-9a107c55-83cb-4914-86c7-b80595c817e1.png)
-- Fuzzy Grouping: it is used to remove duplicates. In the flat file (same file used as above), there are variation of typo and one clean version of them. I want fuzzy grouping to walk through all the records and pick up the unique/perfect titles and put the title into a blank table as a destination. In this data flow, it contains a flat file source, a fuzzy grouping, a conditional split, and a DB destination -> Fuzzy Grouping editor, only select one column that has variation of typos. Threshold can be adjust based on the result on SSMS. The reason to use conditional split is only the records where keyin = keyout will be passed on to destination. 
+- Fuzzy Grouping: it is used to remove duplicates. In the flat file (same file used as above), there are variation of typo and one clean version of them. I want fuzzy grouping to walk through all the records and pick up the unique/perfect titles and put the title into a blank table as a destination. In this data flow, it contains a flat file source, a fuzzy grouping, a conditional split, and a DB destination -> Fuzzy Grouping editor, only select one column that has variation of typos. Threshold can be adjust based on the result on SSMS (0.8 threshold will get 12 records but not all are exact match. 0.5 threshold will get 6 records with better match). The reason to use conditional split is only the records where keyin = keyout will be passed on to destination. The blank table on ssms finally has 6 records in it. 
 
 ![image](https://user-images.githubusercontent.com/110323703/217663254-7027bbe7-b14d-4a32-bcf8-a8a6e6cb1a40.png)
-![image](https://user-images.githubusercontent.com/110323703/217663801-463c72bb-b766-41b9-ac4e-c58bc309007b.png)
+![image](https://user-images.githubusercontent.com/110323703/217666143-1c82226b-3d52-4014-ba04-bfd6a11d35b5.png)
 ![image](https://user-images.githubusercontent.com/110323703/217664732-4f6c7ca1-a71a-46ab-aabe-83cd74b0c179.png)
 ![image](https://user-images.githubusercontent.com/110323703/217664919-ead0c930-8304-48f0-bd28-5aed76e903d4.png)
-![image](https://user-images.githubusercontent.com/110323703/217665121-03049d3c-8fa6-46ac-a858-58695d070ca2.png)
+![image](https://user-images.githubusercontent.com/110323703/217666071-210a7d92-c6b8-4083-a3f8-a0e92841847f.png)
+![image](https://user-images.githubusercontent.com/110323703/217666278-3a421b55-aad6-43e4-b66d-6dd06fd91483.png)
+![image](https://user-images.githubusercontent.com/110323703/217666415-d4be63c6-a96e-483d-8a09-3022b53b6a18.png)
+- Row Count Transformation:
+- 
+
 
 
 
