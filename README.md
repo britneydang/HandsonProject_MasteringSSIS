@@ -66,7 +66,7 @@ Data Flow Tasks - Transformations:
 ![image](https://user-images.githubusercontent.com/110323703/217608405-6b31fa2b-2e6d-472f-a46d-f7a880b32238.png)
 ![image](https://user-images.githubusercontent.com/110323703/217611549-5b71e93c-5fbf-4c5d-849a-43ab2a7d7982.png)
 ![image](https://user-images.githubusercontent.com/110323703/217612562-52adc2a9-1e33-4037-bc12-68c29aa4e834.png)
-- Fuzzy Lookup Transformation: What if the lookup column is not an integer but it's an alphabetical data. An example of Fuzzy: Standard is "Customer Service Representative" and Look up column is "Cust Service Rep." or "Cutsomer Serviec Representative". Human error typo even though they are all the same but normal lookup will not matched. In this case, Fuzzy Lookup will be used. Flat file that contain manual typing is my source, lookup, fuzzy lookup, DB Destination. Lookup will be able to match things when spelling is perfect; when spelling is not perfect, lookup will put the no match output to the Fuzzy Lookup. And then use Union All to add the Lookup and Fuzzy Lookup before sending to the Destination. In the Lookup Editor, select Redirect rows to no match output -> column: connect the common field in the flat file to the Lookup table -> connect Lookup to Union All with Match output and No Match with Fuzzy Lookup. In Fuzzy Editor, need to specify the threshold and the token delimiter (look at the flat file, see that some typo like "." represent a continuity or space) -> Output of Fuzzy Lookup is to Union All
+- Fuzzy Lookup: What if the lookup column is not an integer but it's an alphabetical data. An example of Fuzzy: Standard is "Customer Service Representative" and Look up column is "Cust Service Rep." or "Cutsomer Serviec Representative". Human error typo even though they are all the same but normal lookup will not matched. In this case, Fuzzy Lookup will be used. Flat file that contain manual typing is my source, lookup, fuzzy lookup, DB Destination. Lookup will be able to match things when spelling is perfect; when spelling is not perfect, lookup will put the no match output to the Fuzzy Lookup. And then use Union All to add the Lookup and Fuzzy Lookup before sending to the Destination. In the Lookup Editor, select Redirect rows to no match output -> column: connect the common field in the flat file to the Lookup table -> connect Lookup to Union All with Match output and No Match with Fuzzy Lookup. In Fuzzy Editor, need to specify the threshold and the token delimiter (look at the flat file, see that some typo like "." represent a continuity or space) -> Output of Fuzzy Lookup is to Union All
 
 ![image](https://user-images.githubusercontent.com/110323703/217622872-0269a9bb-9511-47f6-99de-2306c35037d3.png)
 ![image](https://user-images.githubusercontent.com/110323703/217623689-a9838029-237a-4ba3-9bc9-74758c923893.png)
@@ -74,6 +74,14 @@ Data Flow Tasks - Transformations:
 ![image](https://user-images.githubusercontent.com/110323703/217625517-ab8f2f63-0281-499e-9770-bcdc2c6bba1c.png)
 ![image](https://user-images.githubusercontent.com/110323703/217625950-0c682fc2-c9db-4ae7-b8fe-870a04876cc6.png)
 ![image](https://user-images.githubusercontent.com/110323703/217636842-9a107c55-83cb-4914-86c7-b80595c817e1.png)
+- Fuzzy Grouping: it is used to remove duplicates. In the flat file (same file used as above), there are variation of typo and one clean version of them. I want fuzzy grouping to walk through all the records and pick up the unique/perfect titles and put the title into a blank table as a destination. In this data flow, it contains a flat file source, a fuzzy grouping, a conditional split, and a DB destination -> Fuzzy Grouping editor, only select one column that has variation of typos. Threshold can be adjust based on the result on SSMS. The reason to use conditional split is only the records where keyin = keyout will be passed on to destination. 
+
+![image](https://user-images.githubusercontent.com/110323703/217663254-7027bbe7-b14d-4a32-bcf8-a8a6e6cb1a40.png)
+![image](https://user-images.githubusercontent.com/110323703/217663801-463c72bb-b766-41b9-ac4e-c58bc309007b.png)
+![image](https://user-images.githubusercontent.com/110323703/217664732-4f6c7ca1-a71a-46ab-aabe-83cd74b0c179.png)
+![image](https://user-images.githubusercontent.com/110323703/217664919-ead0c930-8304-48f0-bd28-5aed76e903d4.png)
+![image](https://user-images.githubusercontent.com/110323703/217665121-03049d3c-8fa6-46ac-a858-58695d070ca2.png)
+
 
 
 
