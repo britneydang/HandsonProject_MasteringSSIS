@@ -83,7 +83,7 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/217666071-210a7d92-c6b8-4083-a3f8-a0e92841847f.png)
 ![image](https://user-images.githubusercontent.com/110323703/217666278-3a421b55-aad6-43e4-b66d-6dd06fd91483.png)
 ![image](https://user-images.githubusercontent.com/110323703/217666415-d4be63c6-a96e-483d-8a09-3022b53b6a18.png)
-- Row Count Transformation:
+- Row Count Transformation: 
 - OLE DB Command transformation:
 - Pivot transformation:
 - Unpivot transformation:
@@ -142,9 +142,20 @@ Working with Maintenance Planning:
 - Reorganize Index task:
 - Check Database Integrity task:
 
+Working with CheckPoints:
 
+Working with different sources and Destinations:
+- XML Source and RawFile Destination:
+- RawFile Source and SQLServer Destination:
+- ADO.NET Source and ADO.NET Destination:
+- RecordSet Destination:
+- DataReader Destination: 
 
+Incremental Data Loading Techniques:
 
+Working with CDC Components:
+
+Deployment:
 
 
 
