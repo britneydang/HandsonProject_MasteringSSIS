@@ -62,7 +62,6 @@ Working with Data Flow Tasks:
 - Cache transformation: Cache serves as a buffer memory. Once all records are available in the cache and whenever the lookup has a search for the productID, it sarches for that product ID into the buffer memory rather than requesting in SQL Server so it is much faster. I need to create two data flow tasks. One data flow contains a source and cache transform. One data flow will contain a source, a lookup, a destination. In the Cache connection manager editor, make sure that the common field (which is used to looked up table), in this case is ProductID, = 1. In the Lookup Transformation Editor, select Full Cache/Cache connection manager
 
 ![image](https://user-images.githubusercontent.com/110323703/217612390-1f995ee5-e7fa-4d2d-be56-dcf55bcc30ed.png)
-
 ![image](https://user-images.githubusercontent.com/110323703/217608405-6b31fa2b-2e6d-472f-a46d-f7a880b32238.png)
 ![image](https://user-images.githubusercontent.com/110323703/217611549-5b71e93c-5fbf-4c5d-849a-43ab2a7d7982.png)
 ![image](https://user-images.githubusercontent.com/110323703/217612562-52adc2a9-1e33-4037-bc12-68c29aa4e834.png)
@@ -81,14 +80,13 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/217664732-4f6c7ca1-a71a-46ab-aabe-83cd74b0c179.png)
 ![image](https://user-images.githubusercontent.com/110323703/217664919-ead0c930-8304-48f0-bd28-5aed76e903d4.png)
 ![image](https://user-images.githubusercontent.com/110323703/217666071-210a7d92-c6b8-4083-a3f8-a0e92841847f.png)
-![image](https://user-images.githubusercontent.com/110323703/217666278-3a421b55-aad6-43e4-b66d-6dd06fd91483.png)
 ![image](https://user-images.githubusercontent.com/110323703/217666415-d4be63c6-a96e-483d-8a09-3022b53b6a18.png)
 - Row Count Transformation with Variable at package level: Row Count counts how many rows are ready to be passed through the pipeline. My data flow contains a OLE DB source, a row count, and a variable at the control flow level -> in control flow tab, R-click blank space, choose Variables -> create new variable name "RowCounter" -> in data flow tab, double click Row Count component and select the newly added variable. 
 
 ![image](https://user-images.githubusercontent.com/110323703/217948810-b1c4eb65-cb5a-43b6-9bcf-bd60e50390d0.png)
 ![image](https://user-images.githubusercontent.com/110323703/217949543-bf150eb8-69ff-4a82-a6f1-6406b8915a28.png)
 
-- OLE DB Command transformation:
+- OLE DB Command transformation: it uses to manipulate data using SQL commands like Insert, Update, or Delete in a row wise manner.
 - Pivot transformation:
 - Unpivot transformation:
 
