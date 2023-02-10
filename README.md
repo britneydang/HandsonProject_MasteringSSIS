@@ -86,9 +86,13 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/217948810-b1c4eb65-cb5a-43b6-9bcf-bd60e50390d0.png)
 ![image](https://user-images.githubusercontent.com/110323703/217949543-bf150eb8-69ff-4a82-a6f1-6406b8915a28.png)
 
-- OLE DB Command transformation: it uses to manipulate data using SQL commands like Insert, Update, or Delete in a row wise manner. I want to run an insert command using the OLE DB Command to add data from one table into a different blank table. In the OLE DB Command Editor, select the Connection Manager -> Component Properties: SQLCommand: type in the command for the new table (Insert data from OccupationTitle column in Occupation table into NewOccupations table and VALUES(?) mean multiple parameters.
+- OLE DB Command transformation: it uses to manipulate data using SQL commands like Insert, Update, or Delete in a row wise manner. I want to run an insert command using the OLE DB Command to add data from one table into a different blank table. In the OLE DB Command Editor, select the Connection Manager -> Component Properties: SQLCommand: type in the command for the new table (Insert data from OccupationTitle column in Occupation table into NewOccupations table and VALUES(?) mean one parameter). No need to have a Destination component.
 
-![image](https://user-images.githubusercontent.com/110323703/218127706-053ead8f-e80b-4984-9376-71b5c786f7cb.png)
+![image](https://user-images.githubusercontent.com/110323703/218130748-ff5ba0b0-98b6-43d8-ac71-764dfcc1e389.png)
+![image](https://user-images.githubusercontent.com/110323703/218130913-956c1297-aa26-4df8-8b11-bd49ff0bff62.png)
+![image](https://user-images.githubusercontent.com/110323703/218133561-062b0d44-180e-42e0-b00b-951a0d367342.png)
+![image](https://user-images.githubusercontent.com/110323703/218133893-6dd7122e-0604-446c-868f-78058cd36271.png)
+
 
 
 - Pivot transformation:
