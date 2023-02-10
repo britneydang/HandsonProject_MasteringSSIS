@@ -111,7 +111,11 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/218162501-3c09d8f5-207b-48f8-b233-e96525913139.png)
 ![image](https://user-images.githubusercontent.com/110323703/218169251-a8361f96-b589-46d0-99d8-88894b92a534.png)
 
-- Term Lookup transformation:
+- Term Lookup transformation: it determines how frequently a specific term occur in a data flow/a sentence. Use the same flat file as above for source -> Term Lookup Editor, select the newly created TermExtraction table as Reference table -> mapping avialble input to avaialble destination
+
+![image](https://user-images.githubusercontent.com/110323703/218177137-fe29bd81-e8e0-4d27-9a71-76ab8bc325d0.png)
+![image](https://user-images.githubusercontent.com/110323703/218177313-a4bff22c-9d89-4ae8-9f83-3ffef0f47dbf.png)
+![image](https://user-images.githubusercontent.com/110323703/218178489-82fb2807-e0a9-4758-b930-d057671e2229.png)
 
 Working with Control Flow Tasks:
 - Script task: it brings the result into the screen like a pop-up table. It is meant for writing VB .NET or C# scripts. In Control Flow tab, it contains a data flow task and a script task ->  Script Task editor, select appropriate Variable -> edit Script... -> a script file will be opened -> edit script: inside the Main () function, MessageBox.Show("My Row Count Result is:" + Dts.Variables["User::RowCounter"].Value.ToString()); -> save script and close.
