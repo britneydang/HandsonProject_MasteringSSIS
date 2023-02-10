@@ -135,8 +135,11 @@ The major differences between data flow and control flow is the data flow activi
 
 ![image](https://user-images.githubusercontent.com/110323703/218189828-35162041-e982-4cbf-8971-1647d70c0f32.png)
 ![image](https://user-images.githubusercontent.com/110323703/218194013-f5d85866-b6a0-4f89-8143-73bfbc09f97c.png)
-- Sequence Container task:
-- Execute Process task:
+- Sequence Container task: it groups and organizes many tasks/activities in one unit/block in a readable way.
+- Execute Process task: it runs any exe file or batch file from SSIS package. A note will pop-up to show a description of what this package is about before executing the main task. Create text file -> Execute Process Task Editor, input details. 
+
+![image](https://user-images.githubusercontent.com/110323703/218197875-8d2b1882-195a-49c7-bbed-25e652aaeb50.png)
+![image](https://user-images.githubusercontent.com/110323703/218198116-a0cbdcd5-ab05-4533-9a67-e2be4e4d2217.png)
 - Execute Package task:
 - Passing Parameters between Packages:
 - File System task:
