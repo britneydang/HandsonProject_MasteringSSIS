@@ -118,13 +118,23 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/218178489-82fb2807-e0a9-4758-b930-d057671e2229.png)
 
 Working with Control Flow Tasks:
+The major differences between data flow and control flow is the data flow activities are mostly meant for transformations, which get executed for every row that gets processed; the control flow activities will run one time (unless put them into ForLoop container)
+
 - Script task: it brings the result into the screen like a pop-up table. It is meant for writing VB .NET or C# scripts. In Control Flow tab, it contains a data flow task and a script task ->  Script Task editor, select appropriate Variable -> edit Script... -> a script file will be opened -> edit script: inside the Main () function, MessageBox.Show("My Row Count Result is:" + Dts.Variables["User::RowCounter"].Value.ToString()); -> save script and close.
 
 ![image](https://user-images.githubusercontent.com/110323703/217950701-84121a0d-9997-4915-a3fc-4ad033d7aa17.png)
 ![image](https://user-images.githubusercontent.com/110323703/217953017-1f66ba47-4082-4f00-8df8-bfbcb89e06d4.png)
 ![image](https://user-images.githubusercontent.com/110323703/217953177-2ce20009-e7a0-4b0c-a45b-87fcd4fbdc24.png)
 
-- Bulk Insert task:
+- Bulk Insert task: it inserts multiple records into the destination in a bulk manner. I want to insert data from an existing csv file (with delimiter ",") into a table on SSMS -> Bulk Insert Editor, in Connection tab, select appropriate info for Connection, DestinationTable, Delimiter, File. In Options tab, Options:
+  - Check constraint: if the check constraint fails, then the record insert will fail and everything will fail.
+  - Keep nulls: if the source file doesnt have any data, the the nulls will be retained in the destination database.
+  - Enable indentity insert: if I want to supply the values for the auto identity fields by myself.
+  - Table lock: if I want to keep the table in a locked state while it is processing
+  - Fire triggers: if I have written any triggers on this table and while that record is getting inserted into this table, the triggers will also fire.
+
+![image](https://user-images.githubusercontent.com/110323703/218189828-35162041-e982-4cbf-8971-1647d70c0f32.png)
+![image](https://user-images.githubusercontent.com/110323703/218194013-f5d85866-b6a0-4f89-8143-73bfbc09f97c.png)
 - Sequence Container task:
 - Execute Process task:
 - Execute Package task:
