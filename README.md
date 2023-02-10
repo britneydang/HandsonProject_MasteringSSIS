@@ -93,10 +93,14 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/218133561-062b0d44-180e-42e0-b00b-951a0d367342.png)
 ![image](https://user-images.githubusercontent.com/110323703/218133893-6dd7122e-0604-446c-868f-78058cd36271.png)
 
-
-
-- Pivot transformation:
-- Unpivot transformation:
+- Pivot transformation: it pivot data on a column value, making it less normalized. For Ex: I want to transform Text file A into B. The data flow contains a Flat text file with unpivot data, a pivot component, a flat file destination -> In the Pivot, select appropriate value for Pivot Key, Set Key, Pivot Value. Type the pivot output column -> click generate column now -> Advanced Editor for Pivot, I can update output column names
+ 
+![image](https://user-images.githubusercontent.com/110323703/218136439-20c1365b-7bdf-44a5-9b19-764a4165e0c2.png)
+![image](https://user-images.githubusercontent.com/110323703/218136582-1e032e70-8d3a-4925-931e-1496f782a1af.png)
+![image](https://user-images.githubusercontent.com/110323703/218150576-9d9af888-f87a-43e8-a074-0d2d72b89053.png)
+![image](https://user-images.githubusercontent.com/110323703/218151704-e84d9f2d-8642-4d34-87fe-3748391a2f90.png)
+![image](https://user-images.githubusercontent.com/110323703/218154441-3f8ce27c-9a4f-49ff-a6fc-f70588a818d2.png)
+- Unpivot transformation: 
 
 Working with Control Flow Tasks:
 - Script task: it brings the result into the screen like a pop-up table. It is meant for writing VB .NET or C# scripts. In Control Flow tab, it contains a data flow task and a script task ->  Script Task editor, select appropriate Variable -> edit Script... -> a script file will be opened -> edit script: inside the Main () function, MessageBox.Show("My Row Count Result is:" + Dts.Variables["User::RowCounter"].Value.ToString()); -> save script and close.
