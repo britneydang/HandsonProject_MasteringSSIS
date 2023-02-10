@@ -86,12 +86,16 @@ Working with Data Flow Tasks:
 ![image](https://user-images.githubusercontent.com/110323703/217948810-b1c4eb65-cb5a-43b6-9bcf-bd60e50390d0.png)
 ![image](https://user-images.githubusercontent.com/110323703/217949543-bf150eb8-69ff-4a82-a6f1-6406b8915a28.png)
 
-- OLE DB Command transformation: it uses to manipulate data using SQL commands like Insert, Update, or Delete in a row wise manner.
+- OLE DB Command transformation: it uses to manipulate data using SQL commands like Insert, Update, or Delete in a row wise manner. I want to run an insert command using the OLE DB Command to add data from one table into a different blank table. In the OLE DB Command Editor, select the Connection Manager -> Component Properties: SQLCommand: type in the command for the new table (Insert data from OccupationTitle column in Occupation table into NewOccupations table and VALUES(?) mean multiple parameters.
+
+![image](https://user-images.githubusercontent.com/110323703/218127706-053ead8f-e80b-4984-9376-71b5c786f7cb.png)
+
+
 - Pivot transformation:
 - Unpivot transformation:
 
 Working with Control Flow Tasks:
-- Script task: it brings the result into the screen like a pop-up table. It is meant for writing VB .NET or C# scripts. In Control Flow tab, it contains a data flow task and a script task ->  Script Task editor, select appropriate Variable -> edit Script... -> a script file will be opened -> edit script: inside the Main () function, MessageBox.Show("My Row Count Result is:" + Dts.Variables["User::RowCounter"].Value.ToString()); -> save script and close -> 
+- Script task: it brings the result into the screen like a pop-up table. It is meant for writing VB .NET or C# scripts. In Control Flow tab, it contains a data flow task and a script task ->  Script Task editor, select appropriate Variable -> edit Script... -> a script file will be opened -> edit script: inside the Main () function, MessageBox.Show("My Row Count Result is:" + Dts.Variables["User::RowCounter"].Value.ToString()); -> save script and close.
 
 ![image](https://user-images.githubusercontent.com/110323703/217950701-84121a0d-9997-4915-a3fc-4ad033d7aa17.png)
 ![image](https://user-images.githubusercontent.com/110323703/217953017-1f66ba47-4082-4f00-8df8-bfbcb89e06d4.png)
