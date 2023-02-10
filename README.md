@@ -136,11 +136,14 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218189828-35162041-e982-4cbf-8971-1647d70c0f32.png)
 ![image](https://user-images.githubusercontent.com/110323703/218194013-f5d85866-b6a0-4f89-8143-73bfbc09f97c.png)
 - Sequence Container task: it groups and organizes many tasks/activities in one unit/block in a readable way.
-- Execute Process task: it runs any executable file or batch file from SSIS package. I want to execute copy a specific folder from one drive to a different drive -> Create a destination new folder -> In the Execute Process Task Editor, on the Process tab, specify the executable file I want to run in the Executable property. In the Arguments property, specify any command-line arguments that need to be passed to the executable file. In the WorkingDirectory property, specify the working directory for the executable file.
+- Execute Process task: it runs any executable file or batch file from SSIS package. I want to execute copy a specific folder from one drive to a different drive -> Create a destination new folder -> In the Execute Process Task Editor, on the Process tab, specify the executable file I want to run in the Executable property. In the Arguments property, specify any command-line arguments that need to be passed to the executable file. In the WorkingDirectory property, specify the working directory for the executable file. All files inside Folder A will be copied into Folader B.
 
-![image](https://user-images.githubusercontent.com/110323703/218203966-32f29ad4-c56b-4e5f-96f1-c149db65fcf3.png)
+![image](https://user-images.githubusercontent.com/110323703/218207140-c124bb13-eb5a-4ce9-a92d-848832e7c8fb.png)
+- Execute Package task: it calls another SSIS package (child) as a step within a parent SSIS package. It's useful when I want to break up a complex process into smaller, reusable packages, or when I want to organize packages into a logical grouping of tasks. Two types: 
+  - Project Reference:
+  - External Reference: 
 
-- Execute Package task:
+
 - Passing Parameters between Packages:
 - File System task:
 - Web Service task:
