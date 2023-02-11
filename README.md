@@ -148,8 +148,12 @@ The major differences between data flow and control flow is the data flow activi
   - External Reference: Child package is not in the solution, not in this project and it is saved somewhere else like on desktop/file system or in SQL Server MSDB Database.
 
 ![image](https://user-images.githubusercontent.com/110323703/218245141-411ac4b5-b2b2-4e0d-80a4-546a63748c7f.png)
-- Passing Parameters between Packages:
+- Passing Parameters between Packages: it passes parameters from one package to another package. I can pass some data from the Parent package to the Child package so that the Child can use that data as an input to do something. Child parameter = 20 in the Child package and Parent parameter = 10 in the Parent package. If I run from the Child package, the Child value is 20. If I run from the Parent package, the Child value is 10. In Parent package, Execute package task -> parameter bindings -> add 
 
+![image](https://user-images.githubusercontent.com/110323703/218245826-d963523d-ae11-4bb4-a143-8a2eb4ab1d3c.png)
+![image](https://user-images.githubusercontent.com/110323703/218245837-3f03d221-638e-4d02-b089-bab8dc5884b2.png)
+![image](https://user-images.githubusercontent.com/110323703/218245882-d305b3e2-28d7-4de7-87fb-32aff37778c5.png)
+![image](https://user-images.githubusercontent.com/110323703/218246241-e9c31137-c5e8-4b29-a5f3-81ef3ae0a7c6.png)
 - File System task:
 - Web Service task:
 - XML task:
