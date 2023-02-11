@@ -139,7 +139,7 @@ The major differences between data flow and control flow is the data flow activi
 - Execute Process task: it runs any executable file or batch file from SSIS package. I want to execute copy a specific folder from one drive to a different drive -> Create a destination new folder -> In the Execute Process Task Editor, on the Process tab, specify the executable file I want to run in the Executable property. In the Arguments property, specify any command-line arguments that need to be passed to the executable file. In the WorkingDirectory property, specify the working directory for the executable file. All files inside Folder A will be copied into Folader B.
 
 ![image](https://user-images.githubusercontent.com/110323703/218207140-c124bb13-eb5a-4ce9-a92d-848832e7c8fb.png)
-- Execute Package task: it calls another SSIS package (child) as a step within a parent SSIS package. It's useful when I want to break up a complex process into smaller, reusable packages, or when I want to organize packages into a logical grouping of tasks. Two types: 
+- Execute Package task: it calls another SSIS package (Child) as a step within a Parent SSIS package. It's useful when I want to break up a complex process into smaller, reusable packages, or when I want to organize packages into a logical grouping of tasks. . Two types: 
   - Project Reference:
   - External Reference: 
 
@@ -154,7 +154,7 @@ The major differences between data flow and control flow is the data flow activi
 - Transfer Jobs task:
 - Transfer Login task:
 - Transfer Error Messages task:
-- For Loop Container in a Fixed Manner
+- For Loop Container in a Fixed Manner:
 - For Loop Container in a Variant Manner:
 - For Each File Enumerator:
 - For Each Item Enumerator:
