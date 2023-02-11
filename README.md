@@ -136,15 +136,20 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218189828-35162041-e982-4cbf-8971-1647d70c0f32.png)
 ![image](https://user-images.githubusercontent.com/110323703/218194013-f5d85866-b6a0-4f89-8143-73bfbc09f97c.png)
 - Sequence Container task: it groups and organizes many tasks/activities in one unit/block in a readable way.
-- Execute Process task: it runs any executable file or batch file from SSIS package. I want to execute copy a specific folder from one drive to a different drive -> Create a destination new folder -> In the Execute Process Task Editor, on the Process tab, specify the executable file I want to run in the Executable property. In the Arguments property, specify any command-line arguments that need to be passed to the executable file. In the WorkingDirectory property, specify the working directory for the executable file. All files inside Folder A will be copied into Folader B.
+- Execute Process task: it runs any executable file or batch file from SSIS package. I want to execute copy a specific folder from one drive to a different drive -> Create a destination new folder -> In the Execute Process Task Editor, on the Process tab, specify the executable file I want to run in the Executable property. In the Arguments property, specify any command-line arguments that need to be passed to the executable file. In the WorkingDirectory property, specify the working directory for the executable file. All files inside Folder A will be copied into Folder B.
 
 ![image](https://user-images.githubusercontent.com/110323703/218207140-c124bb13-eb5a-4ce9-a92d-848832e7c8fb.png)
-- Execute Package task: it calls another SSIS package (Child) as a step within a Parent SSIS package. It's useful when I want to break up a complex process into smaller, reusable packages, or when I want to organize packages into a logical grouping of tasks. . Two types: 
-  - Project Reference:
-  - External Reference: 
+- Execute Package task: it calls another SSIS package (Child) as a step within a Parent SSIS package. It's useful when I want to break up a complex process into smaller, reusable packages, or when I want to organize packages into a logical grouping of tasks. Here I have 2 packages Child and Parent. Execute Package Task Editor, select reference type: Project Reference and External Reference 
+  - Project Reference: both Parent and Child packages are in the same project/ same solution -> select ReferenceType and PackageName -> in Child package, add a Script task to create a message box saying that "I am in the Child package right now" and add a Script task to create a message box saying that "I am back to the Parent package!" in Parent package. Use this to prove that my Execute Package task working well. If I click start the Parent package, the Child package will run first, then go back to the Parent package and run.
 
+![image](https://user-images.githubusercontent.com/110323703/218244344-9214a18f-7c5e-49d3-8f3a-b1b7777506bf.png)
+![image](https://user-images.githubusercontent.com/110323703/218244783-a3aeeeb6-3a15-44e5-b211-2911fe682f4b.png)
+![image](https://user-images.githubusercontent.com/110323703/218245077-1e68e2b0-70fa-414a-a8c0-bbd71c37da68.png)
+  - External Reference: Child package is not in the solution, not in this project and it is saved somewhere else like on desktop/file system or in SQL Server MSDB Database.
 
+![image](https://user-images.githubusercontent.com/110323703/218245141-411ac4b5-b2b2-4e0d-80a4-546a63748c7f.png)
 - Passing Parameters between Packages:
+
 - File System task:
 - Web Service task:
 - XML task:
