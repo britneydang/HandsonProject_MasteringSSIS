@@ -166,12 +166,14 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218297921-318162c5-6072-4963-97b0-e72545a75993.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297965-2f9dd478-9368-408b-b74f-fb4e51ae4050.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297987-b65ed4ac-87c7-4042-a141-8880a29604de.png)
-- Transfer Database task:
+- Transfer Database task: it transfers database from one SQL server to another SQL server
 - Transfer SQL Server Objects task:
 - Transfer Jobs task:
 - Transfer Login task:
 - Transfer Error Messages task:
-- For Loop Container in a Fixed Manner:
+
+
+- For Loop Container in a Fixed Manner: it repeats tasks in a package until it meets the condition
 - For Loop Container in a Variant Manner:
 - For Each File Enumerator:
 - For Each Item Enumerator:
