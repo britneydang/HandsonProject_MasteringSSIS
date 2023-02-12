@@ -154,10 +154,16 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218245837-3f03d221-638e-4d02-b089-bab8dc5884b2.png)
 ![image](https://user-images.githubusercontent.com/110323703/218245882-d305b3e2-28d7-4de7-87fb-32aff37778c5.png)
 ![image](https://user-images.githubusercontent.com/110323703/218246241-e9c31137-c5e8-4b29-a5f3-81ef3ae0a7c6.png)
-- File System task: it performs operations on files and directories in the file system
-- Web Service task:
-- XML task:
-- Data Profiling task:
+- File System task: it performs operations on files and directories in the file system such as create directory, remove directory, copy files, remove files, etc. In File System Task editor, select the operation, add source connection, and specify destination connection. For Copy file operation, I can do a different way by creating 2 variables.
+- Web Service task: (learn later)
+- XML task: (learn later) it work with XML data. There are many Operation types:
+  - XPATH: it is used to query XML file with the expression
+- Data Profiling task: it creates graphical report after analyzing data. In this example, I want to have a report on a count of characters on Firstname column in Person table; a count of NULL on Title column; a count of not NULL on Title column. Data Profiling Editor -> in general tab, destination: create new connection and location -> profile requests tab, select profile type -> under Data, select connection manager, select a specific table
+
+![image](https://user-images.githubusercontent.com/110323703/218296681-9226bdac-6dce-454c-a8cc-da1eef00a040.png)
+![image](https://user-images.githubusercontent.com/110323703/218296920-12baea3a-91c2-4495-b71f-63fa590d94ba.png)
+![image](https://user-images.githubusercontent.com/110323703/218297027-4e22a3d5-23b6-414c-a7ad-7073b6613ded.png)
+
 - Transfer Database task:
 - Transfer SQL Server Objects task:
 - Transfer Jobs task:
