@@ -158,12 +158,14 @@ The major differences between data flow and control flow is the data flow activi
 - Web Service task: (learn later)
 - XML task: (learn later) it work with XML data. There are many Operation types:
   - XPATH: it is used to query XML file with the expression
-- Data Profiling task: it creates graphical report after analyzing data. In this example, I want to have a report on a count of characters on Firstname column in Person table; a count of NULL on Title column; a count of not NULL on Title column. Data Profiling Editor -> in general tab, destination: create new connection and location -> profile requests tab, select profile type -> under Data, select connection manager, select a specific table
+- Data Profiling task: it creates graphical report after analyzing data. In this example, I want to have a report on a count of characters on Firstname column in Person table; a count of NULL on Title column; a count of not NULL on Title column. Data Profiling Editor -> in general tab, destination: create new connection and location -> profile requests tab, select profile type -> under Data, select connection manager, select a specific table -> After running, click Editor and click open Profile Viewer
 
 ![image](https://user-images.githubusercontent.com/110323703/218296681-9226bdac-6dce-454c-a8cc-da1eef00a040.png)
 ![image](https://user-images.githubusercontent.com/110323703/218296920-12baea3a-91c2-4495-b71f-63fa590d94ba.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297027-4e22a3d5-23b6-414c-a7ad-7073b6613ded.png)
-
+![image](https://user-images.githubusercontent.com/110323703/218297921-318162c5-6072-4963-97b0-e72545a75993.png)
+![image](https://user-images.githubusercontent.com/110323703/218297965-2f9dd478-9368-408b-b74f-fb4e51ae4050.png)
+![image](https://user-images.githubusercontent.com/110323703/218297987-b65ed4ac-87c7-4042-a141-8880a29604de.png)
 - Transfer Database task:
 - Transfer SQL Server Objects task:
 - Transfer Jobs task:
