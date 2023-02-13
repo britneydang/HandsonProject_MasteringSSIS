@@ -1,5 +1,5 @@
-# Hands on Project 3: Mastering SSIS
-Project description: In this project, I will build several (SQL Server Integration Services) SSIS Packages from scratch. I will use AdventureWorks2019 data.
+# Learning: Mastering SSIS
+Description: Build several (SQL Server Integration Services) SSIS Packages from scratch. AdventureWorks2019 data will be used.
 
 Required installation:
 - SQL Server Management Studio
