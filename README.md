@@ -166,14 +166,18 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218297921-318162c5-6072-4963-97b0-e72545a75993.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297965-2f9dd478-9368-408b-b74f-fb4e51ae4050.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297987-b65ed4ac-87c7-4042-a141-8880a29604de.png)
-- Transfer Database task: it transfers database from one SQL server to another SQL server
-- Transfer SQL Server Objects task:
-- Transfer Jobs task:
-- Transfer Login task:
+- Transfer Database task: it transfers database from one SQL Server to another SQL Server
+- Transfer SQL Server Objects task: it transfers SQL Server objects between two instances of SQL Server
+- Transfer Master Stored Procedures task: it copies stored procedure in a master database from one SQL Server to another SQL Server
+- Transfer Jobs task: it transfer Jobs from one SQL Server to another SQL Server. Before starting, ensure SQL Server Agent Service is enable on both SQL Servers in ssms -> Job, create new job -> Steps tab, add command, space each command with "GO" 
+
+![image](https://user-images.githubusercontent.com/110323703/218580299-0244cc5c-bd76-49ee-8ab4-f5ea5724121b.png)
+
+- Transfer Logins task:
 - Transfer Error Messages task:
 
-
-- For Loop Container in a Fixed Manner: it repeats tasks in a package until it meets the condition
+- For Loop is when it repeats tasks in a package until it meets the condition
+- For Loop Container in a Fixed Manner: For Loop Editor, in Properties, InitExpression means variable
 - For Loop Container in a Variant Manner:
 - For Each File Enumerator:
 - For Each Item Enumerator:
