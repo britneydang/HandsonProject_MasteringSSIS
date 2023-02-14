@@ -166,18 +166,24 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218297921-318162c5-6072-4963-97b0-e72545a75993.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297965-2f9dd478-9368-408b-b74f-fb4e51ae4050.png)
 ![image](https://user-images.githubusercontent.com/110323703/218297987-b65ed4ac-87c7-4042-a141-8880a29604de.png)
-- Transfer Database task: it transfers database from one SQL Server to another SQL Server
+- Transfer Database task: it transfers database from one instance of SQL Server to another SQL Server
 - Transfer SQL Server Objects task: it transfers SQL Server objects between two instances of SQL Server
-- Transfer Master Stored Procedures task: it copies stored procedure in a master database from one SQL Server to another SQL Server
-- Transfer Jobs task: it transfer Jobs from one SQL Server to another SQL Server. Before starting, ensure SQL Server Agent Service is enable on both SQL Servers in ssms -> Job, create new job -> Steps tab, add command, space each command with "GO" 
+- Transfer Master Stored Procedures task: it copies stored procedure in a master database from one instance of SQL Server to another SQL Server
+- Transfer Jobs task: it transfer Jobs from one instance of SQL Server to another SQL Server. Before starting, ensure SQL Server Agent Service is enable on both SQL Servers in ssms -> Job, create new job -> Steps tab, add command, space each command with "GO" 
 
 ![image](https://user-images.githubusercontent.com/110323703/218580299-0244cc5c-bd76-49ee-8ab4-f5ea5724121b.png)
 
-- Transfer Logins task:
-- Transfer Error Messages task:
+- Transfer Logins task: In ssms, create new log in -> it transfer Login from one instance of SQL Server to another SQL Server
 
+![image](https://user-images.githubusercontent.com/110323703/218621408-4bb6122b-2efc-46f5-a080-2afa2fe8a13f.png)
+- Transfer Error Messages task: it transfers the user defined error messages from one instance of SQL Server to another instance.
 - For Loop is when it repeats tasks in a package until it meets the condition
-- For Loop Container in a Fixed Manner: For Loop Editor, in Properties, InitExpression means variable
+- For Loop Container in a Fixed Manner: In this example, I add a Script task inside the For Loop Container -> Create a variable -> For Loop Editor, in Properties, InitExpression means variable starting from (usually variable = 0), EvalExpression variable means I will run until variable is reach this number, AssignExpression means how I want to incremeant or decreament the value -> Ok. The script task will print the value of the variable -> Script task editor, select user::VariableName ->Edit stript: 
+
+![image](https://user-images.githubusercontent.com/110323703/218625142-2d0fbc13-d619-432d-86de-c3210d8642c2.png)
+![image](https://user-images.githubusercontent.com/110323703/218624750-64143797-e3b9-40f7-80bb-59349fc74575.png)
+![image](https://user-images.githubusercontent.com/110323703/218634108-f80b374c-b591-4c47-9cef-1504c95b0670.png)
+![image](https://user-images.githubusercontent.com/110323703/218634405-361813cc-db3a-44c2-adc2-abad88577296.png)
 - For Loop Container in a Variant Manner:
 - For Each File Enumerator:
 - For Each Item Enumerator:
