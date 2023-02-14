@@ -178,13 +178,16 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218621408-4bb6122b-2efc-46f5-a080-2afa2fe8a13f.png)
 - Transfer Error Messages task: it transfers the user defined error messages from one instance of SQL Server to another instance.
 - For Loop is when it repeats tasks in a package until it meets the condition
-- For Loop Container in a Fixed Manner: In this example, I add a Script task inside the For Loop Container -> Create a variable -> For Loop Editor, in Properties, InitExpression means variable starting from (usually variable = 0), EvalExpression variable means I will run until variable is reach this number, AssignExpression means how I want to incremeant or decreament the value -> Ok. The script task will print the value of the variable -> Script task editor, select user::VariableName ->Edit stript: 
+- For Loop Container in a Fixed Manner: In this example, I add a Script task inside the For Loop Container -> Create a variable -> For Loop Editor, in Properties, InitExpression means variable starting from (usually variable = 0), EvalExpression variable means I will run until variable is reach this number, AssignExpression means how I want to incremeant or decreament the value -> Ok. The script task will print the value of the variable -> Script task editor, select user::VariableName -> Edit stript. This loop is running in a Fixed manner because of AssignExpression set variable = variable + 1
 
 ![image](https://user-images.githubusercontent.com/110323703/218625142-2d0fbc13-d619-432d-86de-c3210d8642c2.png)
 ![image](https://user-images.githubusercontent.com/110323703/218624750-64143797-e3b9-40f7-80bb-59349fc74575.png)
 ![image](https://user-images.githubusercontent.com/110323703/218634108-f80b374c-b591-4c47-9cef-1504c95b0670.png)
 ![image](https://user-images.githubusercontent.com/110323703/218634405-361813cc-db3a-44c2-adc2-abad88577296.png)
-- For Loop Container in a Variant Manner:
+- For Loop Container in a Variant Manner: For Loop Container -> Create a variable -> For Loop Editor, leave AssignExpression blank because this loop is running in a Variant manner. Add Execute SQL Task inside the container. I have a table that currently has 6 records and EvalExpression variable set less than or equal 10. SSIS package will run continuously until the chosen table gets more than 10 records. While the package is running and user is entering data into the chosen table. The moment the table gets more than 10 records, the loop will end and the package execution will end. In Execute SQL Task Editor, under General tab, Resultset = SingleRow, select appropriate Connection Type, Connection, input SQLStatement. Under Result Set, update Result Name to the name I had given in the script 'RowCount'
+
+![image](https://user-images.githubusercontent.com/110323703/218640772-a394d01e-7212-4643-a854-04f5e9cf034e.png)
+![image](https://user-images.githubusercontent.com/110323703/218646899-08c431e8-c882-45f1-8b64-06e68bc96bb4.png)
 - For Each File Enumerator:
 - For Each Item Enumerator:
 - For Each From Variable Enumerator:
