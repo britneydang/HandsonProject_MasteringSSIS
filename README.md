@@ -177,7 +177,7 @@ The major differences between data flow and control flow is the data flow activi
 
 ![image](https://user-images.githubusercontent.com/110323703/218621408-4bb6122b-2efc-46f5-a080-2afa2fe8a13f.png)
 - Transfer Error Messages task: it transfers the user defined error messages from one instance of SQL Server to another instance.
-- For Loop is when it repeats tasks in a package until it meets the condition
+- For Loop Container: it repeats tasks in a package until it meets the condition
 - For Loop Container in a Fixed Manner: In this example, I add a Script task inside the For Loop Container -> Create a variable -> For Loop Editor, in Properties, InitExpression means variable starting from (usually variable = 0), EvalExpression variable means I will run until variable is reach this number, AssignExpression means how I want to incremeant or decreament the value -> Ok. The script task will print the value of the variable -> Script task editor, select user::VariableName -> Edit stript. This loop is running in a Fixed manner because of AssignExpression set variable = variable + 1
 
 ![image](https://user-images.githubusercontent.com/110323703/218625142-2d0fbc13-d619-432d-86de-c3210d8642c2.png)
@@ -188,12 +188,19 @@ The major differences between data flow and control flow is the data flow activi
 
 ![image](https://user-images.githubusercontent.com/110323703/218640772-a394d01e-7212-4643-a854-04f5e9cf034e.png)
 ![image](https://user-images.githubusercontent.com/110323703/218646899-08c431e8-c882-45f1-8b64-06e68bc96bb4.png)
-- For Each File Enumerator:
-- For Each Item Enumerator:
-- For Each From Variable Enumerator:
-- For Each Node List Enumerator:
-- For Each SMO Enumerator:
-- For Each ADO Enumerator:
+- ForEach Loop Container: it repeats a set of tasks for each element in a specified enumerator, such as a file, folder, or table. Foreach Loop Editor, under Collection tab, select Enumerator: 
+  - For Each File Enumerator: iterating through a list of files. For this example, I have 3 text files and a table in SSMS. I want to create a SSIS package that is able to look into the folder, find as many text files as possible, and export records of each text file into a designation table currently empty) in SQL Server. Under Variable Mapping, create a variable to hold the value of the file. Add a Data Flow Task inside the container -> Drag in Flat file as Source 
+
+![image](https://user-images.githubusercontent.com/110323703/218807282-f9c90bea-ea82-4914-a836-66b602071da7.png)
+
+![image](https://user-images.githubusercontent.com/110323703/218808597-eb873be5-9feb-4061-88e5-4dc9d373f08f.png)
+![image](https://user-images.githubusercontent.com/110323703/218808823-a6bb7f30-83c2-4959-994f-9c8522ae97e2.png)
+
+  - For Each Item Enumerator:
+  - For Each From Variable Enumerator:
+  - For Each Node List Enumerator:
+  - For Each SMO Enumerator:
+  - For Each ADO Enumerator:
 
 Working with Configuration Types:
 - Configuration Files:
