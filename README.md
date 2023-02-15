@@ -189,7 +189,7 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218640772-a394d01e-7212-4643-a854-04f5e9cf034e.png)
 ![image](https://user-images.githubusercontent.com/110323703/218646899-08c431e8-c882-45f1-8b64-06e68bc96bb4.png)
 - ForEach Loop Container: it repeats a set of tasks for each element in a specified enumerator, such as a file, folder, or table. Foreach Loop Editor, under Collection tab, select Enumerator: 
-  - For Each File Enumerator: iterating through a list of files. For this example, I have 3 text files and a table in SSMS. I want to create a SSIS package that is able to look into the folder, find as many text files as possible, and export records of each text file into a designation table currently empty) in SQL Server. Under Variable Mapping, create a variable to hold the value of the file. Add a Data Flow Task inside the container -> Drag in Flat file as Source and OLE DB destination -> In flat file source editor, connect to one of the files inside folder -> In OLE DB destination editor, connect to the chosen table -> go to Properties of Flat file connection manager, in Expressions -> ... -> select Connection string and drag [@User::SourceFileName] into the Expression -> erase the previous Connectionstring in the Properties. Make sure the data type is matched between source and destination. 
+  - For Each File Enumerator: it iterates through a list of files. For this example, I have 3 text files and a table in SSMS. I want to create a SSIS package that is able to look into the folder, find as many text files as possible, and export records of each text file into a designation table currently empty) in SQL Server. Under Variable Mapping, create a variable to hold the value of the file. Add a Data Flow Task inside the container -> Drag in Flat file as Source and OLE DB destination -> In flat file source editor, connect to one of the files inside folder -> In OLE DB destination editor, connect to the chosen table -> go to Properties of Flat file connection manager, in Expressions -> ... -> select Connection string and drag [@User::SourceFileName] into the Expression -> erase the previous Connectionstring in the Properties. Make sure the data type is matched between source and destination. 
 
 ![image](https://user-images.githubusercontent.com/110323703/218807282-f9c90bea-ea82-4914-a836-66b602071da7.png)
 
@@ -198,7 +198,12 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218872389-954c673b-7005-4ea4-b9cd-cdb1f831c8dd.png)
 ![image](https://user-images.githubusercontent.com/110323703/218875717-4fee9bd9-3799-4eef-80ad-319bb4277590.png)
 ![image](https://user-images.githubusercontent.com/110323703/218876641-cc02aa63-48fe-424b-8e79-2ad406cf5d81.png)
-  - For Each Item Enumerator: 
+  - For Each Item Enumerator: it iterates through different records of a specific item. In Foreach Loop Editor, under Collection tab, I have to create a schema in Columns: add how many columns and data type for these columns -> manually input data (hard code) into the schema -> under variable mappings, create new variables (column name in the new schema) -> Add a Script Task inside the Foreach Loop container -> Script task editor: select new variable just added and edit script
+
+![image](https://user-images.githubusercontent.com/110323703/218925459-806d9414-7900-4c6e-8a75-2cad473065c4.png)
+![image](https://user-images.githubusercontent.com/110323703/218930314-6c9b8a0a-89fb-4c64-9775-f8a00ed73ac1.png)
+![image](https://user-images.githubusercontent.com/110323703/218928861-a30f2964-5ed5-445d-a29b-fd410c4fbe5e.png)
+![image](https://user-images.githubusercontent.com/110323703/218930468-36d17026-6d5f-45b3-a0fe-b70835379ead.png)
   - For Each From Variable Enumerator:
   - For Each Node List Enumerator:
   - For Each SMO Enumerator:
