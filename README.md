@@ -198,13 +198,21 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218872389-954c673b-7005-4ea4-b9cd-cdb1f831c8dd.png)
 ![image](https://user-images.githubusercontent.com/110323703/218875717-4fee9bd9-3799-4eef-80ad-319bb4277590.png)
 ![image](https://user-images.githubusercontent.com/110323703/218876641-cc02aa63-48fe-424b-8e79-2ad406cf5d81.png)
-  - For Each Item Enumerator: it iterates through different records of a specific item. In Foreach Loop Editor, under Collection tab, I have to create a schema in Columns: add how many columns and data type for these columns -> manually input data (hard code) into the schema -> under variable mappings, create new variables (column name in the new schema) -> Add a Script Task inside the Foreach Loop container -> Script task editor: select new variable just added and edit script
+  - For Each Item Enumerator: it iterates through different records of a specific item. In Foreach Loop Editor, under Collection tab, I have to create a schema in Columns: add how many columns and data type for these columns -> manually input data (hard code) into the schema -> under variable mappings, create new variables (column name in the new schema) -> Add a Script Task inside the Foreach Loop container -> Script task editor: select new variable just added and edit script 
 
 ![image](https://user-images.githubusercontent.com/110323703/218925459-806d9414-7900-4c6e-8a75-2cad473065c4.png)
 ![image](https://user-images.githubusercontent.com/110323703/218930314-6c9b8a0a-89fb-4c64-9775-f8a00ed73ac1.png)
 ![image](https://user-images.githubusercontent.com/110323703/218928861-a30f2964-5ed5-445d-a29b-fd410c4fbe5e.png)
 ![image](https://user-images.githubusercontent.com/110323703/218930468-36d17026-6d5f-45b3-a0fe-b70835379ead.png)
-  - For Each From Variable Enumerator: it iterates . In Foreach Loop Editor, under Collection tab, I have to create a new variable -> Under Variable Mappings, create a new variable
+  - For Each From Variable Enumerator: it iterates through a list of variables . In Foreach Loop Editor, under Collection tab, select a variable that I want to iterate or create a new variable (it is an array so define type = object) -> Under Variable Mappings, create a new variable. -> I need to add data into the variable: add a script task above the Foreach Loop container -> Script task editor, select ReadWriteVariables -> edit script to manually add data -> connect link -> add another Script task inside the container
+
+![image](https://user-images.githubusercontent.com/110323703/218940305-a770b172-6ec4-45d6-a0ed-69d1142c07b7.png)
+![image](https://user-images.githubusercontent.com/110323703/218940258-43ae0340-6918-46ff-87ef-2294c0044ded.png)
+![image](https://user-images.githubusercontent.com/110323703/218941243-8e277cd3-4610-48ec-bf08-6f217402f7bd.png)
+![image](https://user-images.githubusercontent.com/110323703/218941114-60fa256f-ffbd-45cd-a45d-52505c644e6f.png)
+![image](https://user-images.githubusercontent.com/110323703/218941418-f8bf8310-504f-450b-971c-2a34e4e25745.png)
+
+
   - For Each Node List Enumerator:
   - For Each SMO Enumerator:
   - For Each ADO Enumerator:
