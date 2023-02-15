@@ -204,7 +204,7 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218930314-6c9b8a0a-89fb-4c64-9775-f8a00ed73ac1.png)
 ![image](https://user-images.githubusercontent.com/110323703/218928861-a30f2964-5ed5-445d-a29b-fd410c4fbe5e.png)
 ![image](https://user-images.githubusercontent.com/110323703/218930468-36d17026-6d5f-45b3-a0fe-b70835379ead.png)
-  - For Each From Variable Enumerator: 
+  - For Each From Variable Enumerator: it iterates . In Foreach Loop Editor, under Collection tab, I have to create a new variable -> Under Variable Mappings, create a new variable
   - For Each Node List Enumerator:
   - For Each SMO Enumerator:
   - For Each ADO Enumerator:
