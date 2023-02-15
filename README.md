@@ -216,8 +216,11 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/219065747-611c837f-e91f-4c7e-b151-02480b9f2b8e.png)
 ![image](https://user-images.githubusercontent.com/110323703/219062434-e44df561-93db-454b-9938-c7bcc30fcfdb.png)
 ![image](https://user-images.githubusercontent.com/110323703/219064941-673fc964-e737-4eeb-bb4f-32f91f60ee44.png)
-  - For Each SMO Enumerator:
-  - For Each ADO Enumerator:
+  - For Each SMO Enumerator (SQL Server Management Object): it iterates through database names, table names. In Foreach Loop Editor, under Collection tab, create a new connection manager. Enumerate: select object to be enumerated such as database names, table names, view names, column names from a table etc. -> Under Variable Mappings, create a new variable. Because I expect to see mutiple names so I go to variables to update data type into Object -> add a script task inside and edit script. 
+
+![image](https://user-images.githubusercontent.com/110323703/219071423-f32132d6-e9fc-49c3-a26b-e78f9a0d718f.png)
+![image](https://user-images.githubusercontent.com/110323703/219074848-c111ef4d-6d26-4363-84a7-ac373a66a940.png)
+  - For Each ADO Enumerator: 
 
 Working with Configuration Types:
 - Configuration Files:
