@@ -204,16 +204,18 @@ The major differences between data flow and control flow is the data flow activi
 ![image](https://user-images.githubusercontent.com/110323703/218930314-6c9b8a0a-89fb-4c64-9775-f8a00ed73ac1.png)
 ![image](https://user-images.githubusercontent.com/110323703/218928861-a30f2964-5ed5-445d-a29b-fd410c4fbe5e.png)
 ![image](https://user-images.githubusercontent.com/110323703/218930468-36d17026-6d5f-45b3-a0fe-b70835379ead.png)
-  - For Each From Variable Enumerator: it iterates through a list of variables . In Foreach Loop Editor, under Collection tab, select a variable that I want to iterate or create a new variable (it is an array so define type = object) -> Under Variable Mappings, create a new variable. -> I need to add data into the variable: add a script task above the Foreach Loop container -> Script task editor, select ReadWriteVariables -> edit script to manually add data -> connect link -> add another Script task inside the container
+  - For Each From Variable Enumerator: it iterates through a list of variables. In Foreach Loop Editor, under Collection tab, select a variable that I want to iterate or create a new variable (it is an array so define type = object) -> Under Variable Mappings, create a new variable. -> I need to add data into the variable: add a script task above the Foreach Loop container -> Script task editor, select ReadWriteVariables -> edit script to manually add data -> connect link -> add another Script task inside the container
 
 ![image](https://user-images.githubusercontent.com/110323703/218940305-a770b172-6ec4-45d6-a0ed-69d1142c07b7.png)
 ![image](https://user-images.githubusercontent.com/110323703/218940258-43ae0340-6918-46ff-87ef-2294c0044ded.png)
 ![image](https://user-images.githubusercontent.com/110323703/218941243-8e277cd3-4610-48ec-bf08-6f217402f7bd.png)
 ![image](https://user-images.githubusercontent.com/110323703/218941114-60fa256f-ffbd-45cd-a45d-52505c644e6f.png)
 ![image](https://user-images.githubusercontent.com/110323703/218941418-f8bf8310-504f-450b-971c-2a34e4e25745.png)
+  - For Each Node List Enumerator: it iterates through the nodes in an XML form. In Foreach Loop Editor, under Collection tab, select Document source type, add XML file for document source -> Under Variable Mappings, create a new variable to hold name -> add a script task inside and edit script. 
 
-
-  - For Each Node List Enumerator:
+![image](https://user-images.githubusercontent.com/110323703/219065747-611c837f-e91f-4c7e-b151-02480b9f2b8e.png)
+![image](https://user-images.githubusercontent.com/110323703/219062434-e44df561-93db-454b-9938-c7bcc30fcfdb.png)
+![image](https://user-images.githubusercontent.com/110323703/219064941-673fc964-e737-4eeb-bb4f-32f91f60ee44.png)
   - For Each SMO Enumerator:
   - For Each ADO Enumerator:
 
