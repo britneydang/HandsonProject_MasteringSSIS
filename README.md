@@ -220,7 +220,7 @@ The major differences between data flow and control flow is the data flow activi
 
 ![image](https://user-images.githubusercontent.com/110323703/219071423-f32132d6-e9fc-49c3-a26b-e78f9a0d718f.png)
 ![image](https://user-images.githubusercontent.com/110323703/219074848-c111ef4d-6d26-4363-84a7-ac373a66a940.png)
-  - For Each ADO Enumerator: 
+  - For Each ADO Enumerator (ActiveX Data Objects): it iterates through a set of rows/ a record which is retrieved from a SQL statement or stored procedure. Add Execute SQL task before Foreach Loop Container -> Execute SQL Task editor, under General, specify the Connection to the database and add the table in by typing the Select statement in SQLStatement. I want to retrieve all records from a specific table. SQLSourceType = Direct Input. Result set = full result set -> Under Result set, add new variable, set data type = Object, and result name = 0 -> connect link -> In Foreach Loop Editor, select ADO object source. Depend on how many select table statements I have, choose the correct enumeration mode -> under variable mappings, create variable for all columns from the SQL table -> add a script task inside and edit script. 
 
 Working with Configuration Types:
 - Configuration Files:
