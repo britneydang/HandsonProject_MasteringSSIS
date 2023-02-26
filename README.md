@@ -223,10 +223,15 @@ The major differences between data flow and control flow is the data flow activi
   - For Each ADO Enumerator (ActiveX Data Objects): it iterates through a set of rows/ a record which is retrieved from a SQL statement or stored procedure. Add Execute SQL task before Foreach Loop Container -> Execute SQL Task editor, under General, specify the Connection to the database and add the table in by typing the Select statement in SQLStatement. I want to retrieve all records from a specific table. SQLSourceType = Direct Input. Result set = full result set -> Under Result set, add new variable, set data type = Object, and result name = 0 -> connect link -> In Foreach Loop Editor, select ADO object source. Depend on how many select table statements I have, choose the correct enumeration mode -> under variable mappings, create variable for all columns from the SQL table -> add a script task inside and edit script. 
 
 Working with Configuration Types:
-- Configuration Files:
+- Configuration Files: create OLE DB Source, Flat File destination, variable Color (string) -> R-click project in solution explorer, select Convert to Package Deployment model -> go out to control flow level, package configuration.there are different type of configuration: XML COnfiguarion file
+
+![image](https://user-images.githubusercontent.com/110323703/221390876-ce7c02bc-ad35-44dc-83c3-95a34b51de8a.png)
+![image](https://user-images.githubusercontent.com/110323703/221391206-19a6d518-d9b9-44b7-91f4-0c043dc668c3.png)
 - Configuration Tables:
 
 Creating Dynamic Packages:
+- Creating Dynamic Connection Managers
+- Creating Dynamic Tasks
 
 Event Handling Techniques:
 
