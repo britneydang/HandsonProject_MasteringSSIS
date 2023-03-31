@@ -1,4 +1,4 @@
-# Hands on Project 3: Mastering SSIS
+# Hands on Project: Mastering SSIS
 Project description: This project will be about building several (SQL Server Integration Services) SSIS Packages from scratch. AdventureWorks2019 data will be used.
 
 Required installation:
