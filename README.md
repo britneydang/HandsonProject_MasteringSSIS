@@ -227,50 +227,7 @@ Working with Configuration Types:
 
 ![image](https://user-images.githubusercontent.com/110323703/221390876-ce7c02bc-ad35-44dc-83c3-95a34b51de8a.png)
 ![image](https://user-images.githubusercontent.com/110323703/221391206-19a6d518-d9b9-44b7-91f4-0c043dc668c3.png)
-- Configuration Tables:
 
-Creating Dynamic Packages:
-- Creating Dynamic Connection Managers
-- Creating Dynamic Tasks
-
-Event Handling Techniques:
-
-Working with Log Providers:
-- Log Provider for Text Files:
-- Log Provider for XML Files:
-- Log Provider for Windows Event Log:
-
-Working with WMI:
-- WMI Data Reader task:
-- WMI Event Watcher task:
-
-Using Message Queing techniques:
-
-Working with Maintenance Planning:
-- Backup Database task:
-- SQL Server Agent Job task:
-- Execute T-SQL task:
-- Update Statistics task:
-- History Cleanup task:
-- Shrink Database task:
-- Rebuild Indexes task:
-- Reorganize Index task:
-- Check Database Integrity task:
-
-Working with CheckPoints:
-
-Working with different sources and Destinations:
-- XML Source and RawFile Destination:
-- RawFile Source and SQLServer Destination:
-- ADO.NET Source and ADO.NET Destination:
-- RecordSet Destination:
-- DataReader Destination: 
-
-Incremental Data Loading Techniques:
-
-Working with CDC Components:
-
-Deployment:
 
 
 
